@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+
+{% block title %}Contact Us | {{ site_name }}{% endblock %}
+
+{% block content %}
+
+<section class="content-panel contact-page">
+
+    <div class="contact-header">
+        <span class="eyebrow">GET IN TOUCH</span>
+
+        <h1>CONTACT <span>NEXORA MAX45</span></h1>
+
+        <p>
+            Have a question, suggestion or feedback?
+            Send us a message. We would love to hear from you.
+        </p>
+    </div>
+
+    <div class="contact-form-wrapper">
+
+        <form method="POST" action="{{ url_for('contact') }}">
+
+           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                    maxlength="100"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    maxlength="150"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Write your message here..."
+                    required
+                    maxlength="3000"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

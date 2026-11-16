@@ -1,0 +1,221 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home | {{ site_name }}{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+            <span class="pulse"></span>
+            WELCOME TO NEXORA DIGITAL WORLD
+        </div>
+
+        <h1>
+            Technology for a
+            <span>Smarter Future.</span>
+        </h1>
+
+        <p class="lead">
+            Discover powerful software, Android applications,
+            technology updates and creative videos from
+            Nuwan Theekshana MAX45.
+        </p>
+
+        <div class="actions">
+
+            <a class="btn primary"
+               href="{{ url_for('downloads') }}">
+                Explore Downloads
+                <span>↓</span>
+            </a>
+
+            <a class="btn ghost"
+               href="{{ url_for('youtube') }}">
+                ▶ Watch YouTube
+            </a>
+
+        </div>
+
+        <p class="small-note">
+            ✦ Software Downloads
+            &nbsp; • &nbsp;
+            ✦ Android Apps
+            &nbsp; • &nbsp;
+            ✦ Technology Videos
+        </p>
+
+    </div>
+
+
+    <!-- 3D ENERGY SPHERE -->
+    <div class="hero-art">
+
+        <div class="energy-sphere">
+
+            <div class="sphere-glow"></div>
+
+            <div class="sphere-core">
+                <div class="sphere-shine"></div>
+            </div>
+
+            <div class="sphere-ring ring-one"></div>
+
+            <div class="sphere-ring ring-two"></div>
+
+            <div class="sphere-ring ring-three"></div>
+
+            <div class="sphere-label">
+                NEXORA
+                <small>MAX45</small>
+            </div>
+
+        </div>
+
+        <div class="float-card card-win">
+            ▣ Windows
+        </div>
+
+        <div class="float-card card-android">
+            ◉ Android
+        </div>
+
+        <div class="float-card card-video">
+            ▶ Videos
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES SECTION -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">
+                EXPLORE OUR PLATFORM
+            </div>
+
+            <h2>Explore NEXORA</h2>
+
+            <p class="lead">
+                Everything you need in one digital place.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <!-- WINDOWS -->
+        <a class="feature-card"
+           href="{{ url_for('downloads') }}">
+
+            <div class="feature-icon">
+                ▣
+            </div>
+
+            <h3>Windows Software</h3>
+
+            <p>
+                Discover useful Windows applications,
+                PC software and system tools.
+            </p>
+
+            <span class="text-link">
+                Explore Windows Apps →
+            </span>
+
+        </a>
+
+
+        <!-- ANDROID -->
+        <a class="feature-card"
+           href="{{ url_for('downloads') }}">
+
+            <div class="feature-icon">
+                ◉
+            </div>
+
+            <h3>Android Applications</h3>
+
+            <p>
+                Find Android applications,
+                APK downloads and mobile tools.
+            </p>
+
+            <span class="text-link">
+                Explore Android Apps →
+            </span>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+        <a class="feature-card"
+           href="{{ url_for('youtube') }}">
+
+            <div class="feature-icon red">
+                ▶
+            </div>
+
+            <h3>YouTube Videos</h3>
+
+            <p>
+                Watch technology videos,
+                tutorials and creative content.
+            </p>
+
+            <span class="text-link">
+                Watch Videos →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- YOUTUBE BANNER -->
+<section class="youtube-banner">
+
+    <div>
+
+        <div class="eyebrow">
+            JOIN OUR COMMUNITY
+        </div>
+
+        <h2>
+            More Videos. More Technology.
+        </h2>
+
+        <p>
+            Follow Nuwan Theekshana MAX45
+            for new videos, technology updates
+            and creative content.
+        </p>
+
+    </div>
+
+    <a class="btn youtube-btn"
+       href="{{ youtube_subscribe }}"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        ▶ Subscribe on YouTube
+
+    </a>
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,3 @@
+Copy your real installer files into this folder:
+NEXORA-Driver-Backup-Setup.exe
+NEXORA-Driver-Backup.apk

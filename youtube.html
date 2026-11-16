@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}YouTube | {{ site_name }}{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="eyebrow">YOUTUBE CHANNEL</div><h1>Nuwan Theekshana <span>MAX45</span></h1><p>Watch my latest videos on the official YouTube channel.</p>
+<a class="btn youtube-btn" href="{{ youtube_subscribe }}" target="_blank" rel="noopener">▶ Subscribe to Channel</a></section>
+<section class="youtube-panel">
+  <div class="youtube-symbol">▶</div><h2>Watch on YouTube</h2>
+  <p>Open the channel to browse and play the latest uploaded videos.</p>
+  <a class="btn primary" href="{{ youtube_channel }}" target="_blank" rel="noopener">Open YouTube Channel ↗</a>
+</section>
+{% endblock %}

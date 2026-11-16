@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+
+{% block title %}Software Downloads | {{ site_name }}{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="eyebrow">✦ NEXORA SOFTWARE CENTER</div>
+    <h1>Explore Our <span>Software</span></h1>
+    <p>Powerful tools for your digital world.</p>
+</section>
+
+{% set icons = {
+    'cyberon-browser': '🌐',
+    'driver-manager': '⚙️',
+    'media-player': '▶️',
+    'hsk1-master': '📚',
+    'nexora-calculator': '🧮'
+} %}
+
+<section class="download-grid premium-download-grid">
+
+    {% for key, item in downloads.items() %}
+
+    {% if key not in ['windows', 'android'] %}
+
+    <article class="download-card premium-card">
+
+        <div class="software-logo">
+            {{ icons.get(key, '💻') }}
+        </div>
+
+        <div class="platform">WINDOWS SOFTWARE</div>
+
+        <h2>{{ item.name }}</h2>
+
+        <p class="software-description">
+            {{ item.platform }}
+        </p>
+
+        <div class="software-details">
+            <div>
+                <span>VERSION</span>
+                <strong>{{ item.version }}</strong>
+            </div>
+
+            <div>
+                <span>FILE SIZE</span>
+                <strong>{{ item.size }}</strong>
+            </div>
+        </div>
+
+        {% if key == 'cyberon-browser' %}
+
+        <a class="btn primary full premium-download-btn"
+           href="https://drive.google.com/file/d/1nJ54lps-G3tFQE1H896MqbU1NFIk4U7h/view?usp=drive_link"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span>Download CYBERON Browser</span>
+            <span>↓</span>
+        </a>
+
+        {% else %}
+
+        <a class="btn primary full premium-download-btn"
+           href="{{ url_for('download_file', platform=key) }}">
+            <span>Download EXE</span>
+            <span>↓</span>
+        </a>
+
+        {% endif %}
+
+    </article>
+
+    {% endif %}
+    {% endfor %}
+
+</section>
+
+<div class="info-panel">
+    <b>Security Notice:</b>
+    Download software only from trusted sources.
+    Scan downloaded files before installation.
+</div>
+
+{% endblock %}
